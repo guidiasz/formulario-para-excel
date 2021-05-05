@@ -17,6 +17,6 @@ Agora, quando o candidato clica em "enviar", as informações são armazenados c
 
 ## Gerar planilha
 
-Sempre que a recrutadora precisar, ela pode baixar uma planilha com todos os dados dos candidatos. Também é possível filtrar os candidatos por área de atuação. Um processo que antes levava horas, agora é feito com apenas alguns cliques! Demonstração [disponível aqui](https://guidiasz.github.io/formulario-para-excel/).
+Ao clicar em "Baixar Planilha", é feita uma solicitação ao Express, que retorna uma planilha do Excel com os dados dos candidatos para download. Um processo que antes levava horas, agora é feito com apenas alguns cliques! Demonstração [disponível aqui](https://guidiasz.github.io/formulario-para-excel/).
 
 ![enter image description here](https://i.imgur.com/vD2Ypsk.png)
