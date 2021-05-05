@@ -1,18 +1,21 @@
-async function main() {
-  const customExpress = require('./config/customExpress');
-  const conexao = require('./conexao/conexao.js');
-  const PORT = process.env.PORT || 5000;
-  try {
-    await conexao.connect();
+const botao = document.querySelector('#botao');
 
-    const app = customExpress();
+botao.addEventListener('click', function () {
+  const form = document.querySelector('form');
+  const intervalo = form.querySelector('#candidatos');
+  const checkboxCargos = form.querySelectorAll('.checkbox input:checked');
+  let cargos = [];
+  checkboxCargos.forEach(function (checkboxCargo) {
+    cargos.push(checkboxCargo.name);
+  });
 
-    app.listen(PORT, function () {
-      console.log(`servidor rodando na porta ${PORT}`);
-    });
-  } catch (e) {
-    console.log(e);
-  }
-}
+  const params = new URLSearchParams({
+    intervalo: intervalo.value,
+  });
 
-main();
+  cargos.forEach(function (cargo) {
+    params.append('areaDeInteresse', cargo);
+  });
+
+  document.location.assign('https://planilhabancodetalentos.herokuapp.com/?' + params);
+})

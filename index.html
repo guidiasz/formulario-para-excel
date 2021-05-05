@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco de talentos</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <form class="formulario">
+    <h1>Planilha do Excel</h1>
+    <label class="label-candidato" for="candidatos">Pegar candidatos dos:</label>
+    <select name="candidatos" id="candidatos">
+      <option value="30">Últimos 30 dias</option>
+      <option value="60">Últimos 60 dias</option>
+      <option value="90">Últimos 90 dias</option>
+      <option value="todos">Pegar todos os candidatos</option>
+    </select>
+
+    <div class="checkbox">
+      <input type="checkbox" id="adm" name="Administrativo/Financeiro" checked>
+      <label for="adm">Adm/Financeiro</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="dev" name="Desenvolvimento de Software" checked>
+      <label for="dev">Desenvolvimento de Software</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="design" name="Designer" checked>
+      <label for="design">Design</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="marketing" name="Marketing" checked>
+      <label for="marketing">Marketing</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="rh" name="Recursos Humanos" checked>
+      <label for="rh">RH</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="sucesso-cliente" name="Sucesso do Cliente" checked>
+      <label for="sucesso-cliente">Sucesso do Cliente</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="vendas" name="Vendas" checked>
+      <label for="vendas">Vendas</label>
+    </div>
+
+    <input class="botao" type="button" id="botao" value="Baixar Planilha">
+
+  </form>
+  <script src="./index.js"></script>
+</body>
+
+
+</html>
