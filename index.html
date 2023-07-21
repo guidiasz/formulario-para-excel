@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Gerador de Planilha</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#202024">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- end of favicon -->
+  <link rel="stylesheet" href="/src/css/styles.css">
+
+
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+
+        <nav class="nav">
+          <a href="/" class="text-bold active">Gerador de Planilha</a>
+          <a href="/formulario.html" class="text-bold">Formulário</a>
+        </nav>
+        <div class="form-wrapper">
+          <form class="form">
+            <fieldset class="fieldset">
+
+              <div>
+                <label class="text-bold label" for="month">Pegar candidatos dos:</label>
+                <select name="month" id="month" class="input text-regular">
+                  <option value="1">Últimos 30 dias</option>
+                  <option value="2">Últimos 60 dias</option>
+                  <option value="3">Últimos 90 dias</option>
+                  <option value="-1">Pegar todos os candidatos</option>
+
+                </select>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="adm" name="Adm/Financeiro" value="Adm/Financeiro" checked="">
+                <label for="adm" class="text-regular label">Adm/Financeiro</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="dev" name="Desenvolvimento de Software" value="Desenvolvimento de Software" checked="">
+                <label for="dev" class="text-regular label">Desenvolvimento de Software</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="design" name="Design" value="Design" checked="">
+                <label for="design" class="text-regular label">Design</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="marketing" name="Marketing" value="Marketing" checked="">
+                <label for="marketing" class="text-regular label">Marketing</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="RH" name="RH" value="RH" checked="">
+                <label for="RH" class="text-regular label">RH</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="cliente" name="Sucesso do Cliente" value="Sucesso do Cliente" checked="">
+                <label for="cliente" class="text-regular label">Sucesso do Cliente</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="vendas" name="Vendas" value="Vendas" checked="">
+                <label for="vendas" class="text-regular label">Vendas</label>
+              </div>
+              <button class="text-bold button" id="download">Baixar Planilha</button>
+            </fieldset>
+
+          </form>
+
+        </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/js/sheet-generator/main.js"></script>
+
+</body>
+
+</html>

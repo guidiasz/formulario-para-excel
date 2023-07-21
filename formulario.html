@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Formulário Multi Step</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#202024">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- end of favicon -->
+  <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+
+        <nav class="nav">
+          <a href="/" class="text-bold">Gerador de Planilha</a>
+          <a href="/formulario.html" class="text-bold active">Formulário</a>
+        </nav>
+        <div class="form-wrapper">
+          <ol class="steps-list">
+            <li class="text-bold step ">Contato</li>
+            <li class="separator" aria-hidden="true"></li>
+            <li class="text-bold step disabled">Cargo</li>
+            <li class="separator" aria-hidden="true"></li>
+            <li class="text-bold step disabled">Portfólio</span>
+          </ol>
+          <hr class="divider">
+          <form class="form ">
+            <fieldset class="fieldset">
+              <div>
+                <label class="text-bold label" for="Nome">Nome</label>
+                <input class="text-regular input" type="text" id="Nome" placeholder="Como prefere ser chamado" name="Nome" required>
+              </div>
+
+              <div>
+
+                <label class="text-bold label" for="Email">E-mail</label>
+                <input class="text-regular input" type="email" id="Email" placeholder="Digite seu e-mail" name="Email" required>
+              </div>
+              <div>
+                <label class="text-bold label" for="Whatsapp">Telefone (opcional)</label>
+                <input class="text-regular input" type="tel" id="Whatsapp" placeholder="Digite seu número de WhatsApp" name="Whatsapp">
+              </div>
+            </fieldset>
+            <fieldset class="fieldset" aria-hidden="true">
+              <div>
+                <label class="text-bold label" for="Cargo">Vaga de interesse</label>
+                <select name="Cargo" id="Cargo" class="input text-regular">
+                  <option value="Desenvolvimento de Software">Desenvolvimento de Software</option>
+                  <option value="Adm/Financeiro">Adm/Financeiro</option>
+                  <option value="Design">Design</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="RH">RH</option>
+                  <option value="Sucesso do Cliente">Sucesso do Cliente</option>
+                  <option value="Vendas">Vendas</option>
+                </select>
+
+              </div>
+
+              <div>
+                <label class="text-bold label" for="Experiencia">Conte sua experiência nessa área</label>
+                <textarea class="text-regular input textarea" id="Experiencia" placeholder="Fale um pouco sobre por que você escolheu esse cargo" name="Experiencia" required></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset" aria-hidden="true">
+              <div>
+                <label class="text-bold label" for="Portfolio">Link do portfolio (opcional)</label>
+                <input class="text-regular input" type="text" id="Portfolio" placeholder="Envie um link com o seu portfolio" name="Portfolio"></textarea>
+              </div>
+            </fieldset>
+            <div class="navigation-buttons one-button">
+              <button class="text-bold button ghost" id="back" aria-hidden="true" type="button">Voltar</button>
+              <button class="text-bold button" id="continue">Continuar</button>
+            </div>
+            <div class="loading">
+              <p class="text-regular">Enviando</p>
+            </div>
+            <div class="success">
+              <p class="text-regular">Dados novos são removidos a cada 1 hora</p>
+              <p class="text-regular">Resposta enviada com sucesso!</p>
+            </div>
+            <div class="error">
+              <p class="text-regular">Erro, tente novamente mais tarde.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script type="module" src="./src/js/form/form.js"></script>
+</body>
+
+</html>
