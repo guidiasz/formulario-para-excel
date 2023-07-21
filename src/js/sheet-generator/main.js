@@ -24,12 +24,14 @@ async function getAnswers() {
 }
 
 function filterAnswers(answers, filter) {
-  const filteredArr = answers.filter((answer) => {
-    let shouldAdd = true;
-    if (answer.id < filter.time) shouldAdd = false;
-    if (!filter.roles.includes(answer.Cargo)) shouldAdd = false;
-    return shouldAdd;
-  });
+  const filteredArr = answers
+    .filter((answer) => {
+      let shouldAdd = true;
+      if (answer.id < filter.time) shouldAdd = false;
+      if (!filter.roles.includes(answer.Cargo)) shouldAdd = false;
+      return shouldAdd;
+    })
+    .sort((a, b) => b.id - a.id);
   return filteredArr;
 }
 
